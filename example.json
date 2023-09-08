@@ -1,0 +1,15 @@
+    {
+        "_id": "c-05",
+        "_parentId": "b-05",
+        "_type": "component",
+        "_component": "confetti",
+        "_classes": "",
+        "_layout": "full",
+        "title": "Confetti component",
+        "displayTitle": "Confetti component",
+        "body": "",
+        "instruction": "",
+        "_pageLevelProgress": {
+            "_isEnabled": true
+        }
+    }

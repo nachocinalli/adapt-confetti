@@ -1,0 +1,125 @@
+{
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "http://jsonschema.net",
+	"$ref": "http://localhost/plugins/content/component/model.schema",
+	"globals": {
+		"ariaRegion": {
+			"type": "string",
+			"required": true,
+			"default": "",
+			"inputType": "Text",
+			"validators": [],
+			"translatable": true
+		}
+	},
+	"properties": {
+		"_supportedLayout": {
+			"type": "string",
+			"required": true,
+			"enum": ["full-width", "half-width", "both"],
+			"default": "both",
+			"editorOnly": true
+		},
+		"instruction": {
+			"type": "string",
+			"required": false,
+			"default": "",
+			"inputType": "Text",
+			"validators": [],
+			"help": "This is the instruction text",
+			"translatable": true
+		},
+		"_confettiRadius": {
+			"type": "number",
+			"required": false,
+			"default": 0,
+			"title": "Confetti radius",
+			"inputType": "Number",
+			"validators": [],
+			"help": "The radius of the confetti",
+			"translatable": false
+		},
+		"_confettiNumber": {
+			"type": "number",
+			"required": false,
+			"default": 100,
+			"title": "Confetti number",
+			"inputType": "Number",
+			"validators": [],
+			"help": "The number of confetti",
+			"translatable": false
+		},
+		"_emojis": {
+			"type": "array",
+			"required": false,
+			"default": [],
+			"title": "Emojis",
+			"items": {
+				"type": "string",
+				"required": true,
+				"default": "",
+				"inputType": "Text",
+				"validators": [],
+				"help": "The emojis to use"
+
+			}
+		},
+		"_emojiSize": {
+			"type": "number",
+			"required": false,
+			"default": 75,
+			"title": "Emoji size",
+			"inputType": "Number",
+			"validators": [],
+			"help": "The size of the emoji",
+			"translatable": false
+		},
+		"_setCompletionOn": {
+			"type": "string",
+			"required": false,
+			"default": "inview",
+			"title": "Set completion on:",
+			"enum": [
+				"inview",
+				"allItems"
+			],
+			"inputType": {
+				"type": "Select",
+				"options": [
+					"inview",
+					"allItems"
+				]
+			},
+			"validators": [],
+			"help": "Set completion on inview or when click on the button"
+		},
+		"_button": {
+			"type": "object",
+			"title": "Button",
+			"properties": {
+				"buttonText": {
+					"type": "string",
+					"required": false,
+					"default": "Fire confetti",
+					"title": "",
+					"inputType": "Text",
+					"validators": [],
+					"help": "Button label text for the button",
+					"translatable": true
+				},
+				"ariaLabel": {
+					"type": "string",
+					"required": false,
+					"default": "Fire confetti",
+					"title": "",
+					"inputType": "Text",
+					"validators": [],
+					"help": "Aria label for the button",
+					"translatable": true
+				}
+			}
+		}
+
+	}
+}

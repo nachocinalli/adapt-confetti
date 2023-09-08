@@ -1,0 +1,17 @@
+{
+  "name": "adapt-confetti",
+  "version": "1.0.0",
+  "framework": ">=5.19.1",
+  "homepage": "",
+  "bugs": "",
+  "component": "confetti",
+  "targetAttribute": "_confetti",
+  "displayName": "Confetti",
+  "description": "",
+  "main": "/js/adapt-confetti.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0"
+}
