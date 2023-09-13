@@ -1,13 +1,13 @@
 {
   "name": "adapt-confetti",
-  "version": "1.0.0",
+  "version": "2.0.3",
   "framework": ">=5.19.1",
-  "homepage": "",
-  "bugs": "",
+  "homepage": "https://github.com/nachocinalli/adapt-confetti",
+  "bugs": "https://github.com/nachocinalli/adapt-confetti/issues",
   "component": "confetti",
   "targetAttribute": "_confetti",
   "displayName": "Confetti",
-  "description": "",
+  "description": "Add confetti to your Adapt course",
   "main": "/js/adapt-confetti.js",
   "keywords": [
     "adapt-plugin",

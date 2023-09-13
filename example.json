@@ -1,15 +1,13 @@
-    {
-        "_id": "c-05",
-        "_parentId": "b-05",
-        "_type": "component",
-        "_component": "confetti",
-        "_classes": "",
-        "_layout": "full",
-        "title": "Confetti component",
-        "displayTitle": "Confetti component",
-        "body": "",
-        "instruction": "",
-        "_pageLevelProgress": {
-            "_isEnabled": true
-        }
-    }
+{
+  "_confetti": {
+    "_isEnabled": true,
+    "_fireOn": "inview",
+    "_percentInview": 50,
+    "_confettiColors": [],
+    "_emojis": [],
+    "_confettiRadius": 0,
+    "_confettiNumber": 0,
+    "_emojiSize": 0,
+    "_loops": 0
+  }
+}

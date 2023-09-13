@@ -1,125 +1,145 @@
 {
 	"type": "object",
-	"$schema": "http://json-schema.org/draft-04/schema",
+	"$schema": "http://json-schema.org/draft-03/schema",
 	"id": "http://jsonschema.net",
-	"$ref": "http://localhost/plugins/content/component/model.schema",
 	"globals": {
-		"ariaRegion": {
-			"type": "string",
-			"required": true,
-			"default": "",
-			"inputType": "Text",
-			"validators": [],
-			"translatable": true
-		}
-	},
-	"properties": {
-		"_supportedLayout": {
-			"type": "string",
-			"required": true,
-			"enum": ["full-width", "half-width", "both"],
-			"default": "both",
-			"editorOnly": true
-		},
-		"instruction": {
-			"type": "string",
-			"required": false,
-			"default": "",
-			"inputType": "Text",
-			"validators": [],
-			"help": "This is the instruction text",
-			"translatable": true
-		},
 		"_confettiRadius": {
 			"type": "number",
-			"required": false,
-			"default": 0,
-			"title": "Confetti radius",
+			"default": 10,
+			"title": "Confetti Radius",
 			"inputType": "Number",
 			"validators": [],
-			"help": "The radius of the confetti",
-			"translatable": false
+			"help": "The radius of the confetti"
 		},
 		"_confettiNumber": {
 			"type": "number",
-			"required": false,
 			"default": 100,
-			"title": "Confetti number",
+			"title": "Confetti Number",
 			"inputType": "Number",
 			"validators": [],
-			"help": "The number of confetti",
-			"translatable": false
-		},
-		"_emojis": {
-			"type": "array",
-			"required": false,
-			"default": [],
-			"title": "Emojis",
-			"items": {
-				"type": "string",
-				"required": true,
-				"default": "",
-				"inputType": "Text",
-				"validators": [],
-				"help": "The emojis to use"
-
-			}
+			"help": "The number of confetti"
 		},
 		"_emojiSize": {
 			"type": "number",
-			"required": false,
-			"default": 75,
-			"title": "Emoji size",
+			"default": 50,
+			"title": "Emoji Size",
 			"inputType": "Number",
 			"validators": [],
-			"help": "The size of the emoji",
-			"translatable": false
-		},
-		"_setCompletionOn": {
-			"type": "string",
-			"required": false,
-			"default": "inview",
-			"title": "Set completion on:",
-			"enum": [
-				"inview",
-				"allItems"
-			],
-			"inputType": {
-				"type": "Select",
-				"options": [
-					"inview",
-					"allItems"
-				]
-			},
-			"validators": [],
-			"help": "Set completion on inview or when click on the button"
-		},
-		"_button": {
+			"help": "The size of the emoji"
+		}
+
+	},
+	"properties": {
+		"pluginLocations": {
 			"type": "object",
-			"title": "Button",
 			"properties": {
-				"buttonText": {
-					"type": "string",
-					"required": false,
-					"default": "Fire confetti",
-					"title": "",
-					"inputType": "Text",
-					"validators": [],
-					"help": "Button label text for the button",
-					"translatable": true
-				},
-				"ariaLabel": {
-					"type": "string",
-					"required": false,
-					"default": "Fire confetti",
-					"title": "",
-					"inputType": "Text",
-					"validators": [],
-					"help": "Aria label for the button",
-					"translatable": true
+				"component": {
+					"type": "object",
+					"properties": {
+						"_confetti": {
+							"type": "object",
+							"legend": "Confetti",
+							"properties": {
+								"_isEnabled": {
+									"type": "boolean",
+									"default": false,
+									"title": "Enabled",
+									"inputType": "Checkbox",
+									"validators": [],
+									"help": "Enable or disable the confetti"
+								},
+								"_fireOn": {
+									"type": "string",
+									"required": true,
+									"enum": ["inview", "click", "completed", "correct"],
+									"default": "inview",
+									"title": "Fire On",
+									"inputType": {
+										"type": "Select",
+										"options": ["inview", "click", "completed", "correct"]
+									},
+									"validators": [],
+									"help": "When to fire the confetti"
+								},
+								"_percentInview": {
+									"type": "number",
+									"required": true,
+									"default": 50,
+									"title": "Percent Inview",
+									"inputType": "Number",
+									"validators": ["number"],
+									"help": "The percent of the component that needs to be in view to fire the confetti"
+								},
+								"_confettiColors": {
+									"type": "array",
+									"required": false,
+									"title": "Confetti Colors",
+									"items": {
+										"type": "string",
+										"required": false,
+										"default": "",
+										"title": "Color",
+										"inputType": "Text",
+										"validators": [],
+										"help": "The colors of the confetti. Use hex values or color names"
+
+
+
+									}
+								},
+								"_emojis": {
+									"type": "array",
+									"required": false,
+									"title": "Emojis",
+									"items": {
+										"type": "string",
+										"required": false,
+										"default": "",
+										"title": "Emoji",
+										"inputType": "Text",
+										"validators": [],
+										"help": "The emojis to use."
+
+									}
+								},
+								"_confettiRadius": {
+									"type": "number",
+									"default": 0,
+									"title": "Confetti Radius",
+									"inputType": "Number",
+									"validators": [],
+									"help": "The radius of the confetti"
+								},
+								"_confettiNumber": {
+									"type": "number",
+									"default": 0,
+									"title": "Confetti Number",
+									"inputType": "Number",
+									"validators": [],
+									"help": "The number of confetti"
+								},
+								"_emojiSize": {
+									"type": "number",
+									"default": 0,
+									"title": "Emoji Size",
+									"inputType": "Number",
+									"validators": [],
+									"help": "The size of the emoji"
+								},
+								"_loops": {
+									"type": "number",
+									"default": 0,
+									"title": "Loops",
+									"inputType": "Number",
+									"validators": [],
+									"help": "The number of times to loop the confetti"
+								}
+							}
+
+						}
+					}
 				}
 			}
 		}
-
 	}
 }

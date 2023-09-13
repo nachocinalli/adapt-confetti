@@ -8,25 +8,68 @@
     },
     "with": {
       "properties": {
-        "_supportedLayout": {
-          "type": "string",
-          "title": "Supported layout",
-          "default": "both",
-          "enum": [
-            "full-width",
-            "half-width",
-            "both"
-          ],
-          "_adapt": {
-            "editorOnly": true
-          }
-        },
-        "instruction": {
-          "type": "string",
-          "title": "Instruction",
-          "default": "",
-          "_adapt": {
-            "translatable": true
+        "with": {
+          "properties": {
+            "_confetti": {
+              "type": "object",
+              "title": "Confetti",
+              "default": {},
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "title": "Is Enabled",
+                  "default": false
+                },
+                "_fireOn": {
+                  "default": "inview",
+                  "enum": ["inview", "click", "completed", "correct"],
+                  "_backboneForms": "Select"
+                },
+                "_percentInview": {
+                  "type": "number",
+                  "title": "Percent Inview",
+                  "default": 50
+                },
+                "_confettiColors": {
+                  "type": "array",
+                  "title": "Confetti Colors",
+                  "items": {
+                    "type": "string",
+                    "title": "Confetti Color",
+                    "default": ""
+                  }
+                },
+                "_emojis": {
+                  "type": "array",
+                  "title": "Emojis",
+                  "items": {
+                    "type": "string",
+                    "title": "Emoji",
+                    "default": ""
+                  }
+                },
+                "_confettiRadius": {
+                  "type": "number",
+                  "title": "Confetti Radius",
+                  "default": 0
+                },
+                "_confettiNumber": {
+                  "type": "number",
+                  "title": "Confetti Number",
+                  "default": 0
+                },
+                "_emojiSize": {
+                  "type": "number",
+                  "title": "Emoji Size",
+                  "default": 0
+                },
+                "_loops": {
+                  "type": "number",
+                  "title": "Loops",
+                  "default": 0
+                }
+              }
+            }
           }
         }
       }

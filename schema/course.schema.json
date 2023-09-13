@@ -12,7 +12,7 @@
           "type": "object",
           "default": {},
           "properties": {
-            "_components": {
+            "_extensions": {
               "type": "object",
               "default": {},
               "properties": {
@@ -21,13 +21,20 @@
                   "title": "Text",
                   "default": {},
                   "properties": {
-                    "ariaRegion": {
-                      "type": "string",
-                      "title": "ARIA region",
-                      "default": "",
-                      "_adapt": {
-                        "translatable": true
-                      }
+                    "_confettiRadius": {
+                      "type": "number",
+                      "title": "Confetti Radius",
+                      "default": 10
+                    },
+                    "_confettiNumber": {
+                      "type": "number",
+                      "title": "Confetti Number",
+                      "default": 100
+                    },
+                    "_emojiSize": {
+                      "type": "number",
+                      "title": "Emoji Size",
+                      "default": 50
                     }
                   }
                 }
